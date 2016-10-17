@@ -38,6 +38,9 @@
 
 		start:function(){
 			monObjet.intervalID = setInterval(monObjet.countDown, 1000);
+			if(monObjet.timer == 0){
+				monObjet.timer = monObjet.defaultTimer;
+			}
 		},
 
 		reset :function(){
