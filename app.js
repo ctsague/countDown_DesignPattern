@@ -8,6 +8,7 @@
 
 		executer: function(){
 			monObjet.listeners();
+			monObjet.timer = monObjet.defaultTimer;
 		},
 
 		countDown : function(){	
@@ -36,7 +37,6 @@
 		},
 
 		start:function(){
-			monObjet.timer = monObjet.defaultTimer;
 			monObjet.intervalID = setInterval(monObjet.countDown, 1000);
 		},
 
