@@ -2,7 +2,8 @@
 
 	var monObjet = {
 
-		timer : 30,
+		timer : null,
+		defaultTimer : 5,
 		intervalID : null,
 
 		executer: function(){
@@ -12,7 +13,7 @@
 		countDown : function(){	
 			monObjet.timer --;
 			monObjet.afficherTime();		
-			if(monObjet.timer == 0 ){
+			if(monObjet.timer <= 0 ){
 				clearInterval(monObjet.intervalID);
 			}	
 		},
@@ -31,22 +32,18 @@
 		},
 
 		stop:function(){
-
 			monObjet.intervalID = clearInterval(monObjet.intervalID);
-			//clearInterval(monObjet.intervalID);
-
 		},
 
 		start:function(){
-			//var timer = 120;
+			monObjet.timer = monObjet.defaultTimer;
 			monObjet.intervalID = setInterval(monObjet.countDown, 1000);
 		},
 
 		reset :function(){
-			monObjet.timer = 30;
+			monObjet.timer = monObjet.defaultTimer;
 			monObjet.intervalID = monObjet.afficherTime();
 		},
-
 
 	};
 
