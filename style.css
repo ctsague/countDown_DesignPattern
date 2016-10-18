@@ -2,23 +2,48 @@
 	text-align: center;
 }
 
+h1 {
+	text-align: center;
+	color : red;
+}
 
 .main {
 	border : solid gray 2px;
 }
 .count {
-	font-size: 200px;
-	margin: 50px;
+	font-size: 100px;
+	/*margin: 50px;*/
 	color: blue;
-	
 }
 
 span {
-	font-size: 150px;
+	font-size: 100px;
 	color: blue;
 	text-align: center;
 }
 .btn {
 	text-align: center;
-	
+	margin-top: 50px;
+}
+
+.start {
+	background-color: green;
+	font-size: 20px;
+	border-radius: 30px;
+}
+
+.stop {
+	background-color: red;
+	font-size: 20px;
+	border-radius: 30px;
+}
+
+.reset {
+	background-color: yellow;
+	font-size: 20px;
+	border-radius: 30px;
+}
+
+.start:hover, .stop:hover, .reset:hover {
+	background-color: #555;
 }
